@@ -9,8 +9,8 @@
     "dev": "nodemon server.js",
     "start:prod": "set NODE_ENV=production&&nodemon server.js",
     "debug": "ndb server.js",
-    "watch:js": "npx parcel watch --no-hmr ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-    "build:js": "npx parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+    "watch:js": "parcel build ./public/js/index.js --dist-dir ./public/js/bundled",
+    "build:js": "parcel watch ./public/js/index.js --dist-dir ./public/js/bundled"
   },
   "author": "Mohamed Samir",
   "license": "ISC",
@@ -55,6 +55,6 @@
     "parcel-bundler": "^1.12.5"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=12.0.0"
   }
 }
